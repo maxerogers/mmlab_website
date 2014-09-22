@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922214155) do
+ActiveRecord::Schema.define(version: 20140922214516) do
+
+  create_table "tokens", force: true do |t|
+    t.string "type"
+  end
 
   create_table "users", force: true do |t|
     t.string  "name"

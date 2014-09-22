@@ -1,6 +1,7 @@
 #load gems
 require 'sinatra'
 require "sinatra/activerecord"
+require 'omniauth-twitter'
 Dir["./models/*.rb"].each { |file| require file }
 
 #load local files
