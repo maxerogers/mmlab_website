@@ -11,16 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922210857) do
+ActiveRecord::Schema.define(version: 20140922214155) do
 
   create_table "users", force: true do |t|
     t.string  "name"
-    t.string  "password_salt"
-    t.string  "password_hash"
     t.string  "blob"
     t.string  "location"
     t.string  "looking_for"
-    t.boolean "employer",      default: false
+    t.boolean "employer",        default: false
+    t.string  "password_digest"
   end
 
 end
