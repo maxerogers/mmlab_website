@@ -10,6 +10,8 @@ gem "tux"
 gem 'json'
 gem 'bcrypt'
 
+#omnis
+gem 'omniauth-twitter'
 
 group :development do
 	gem 'rerun'

@@ -23,6 +23,7 @@ GEM
     daemons (1.1.9)
     eventmachine (1.0.3)
     ffi (1.9.3)
+    hashie (3.3.1)
     hitimes (1.2.2)
     httparty (0.13.1)
       json (~> 1.8)
@@ -34,7 +35,18 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     minitest (5.4.1)
+    multi_json (1.10.1)
     multi_xml (0.5.5)
+    oauth (0.4.7)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (1.0.1)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
     pg (0.17.1)
     rack (1.5.2)
     rack-protection (1.5.3)
@@ -86,6 +98,7 @@ DEPENDENCIES
   bcrypt
   httparty
   json
+  omniauth-twitter
   pg
   rake
   rerun
