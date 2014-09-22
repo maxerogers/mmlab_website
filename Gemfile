@@ -8,6 +8,7 @@ gem 'thin'
 gem 'httparty'
 gem "tux"
 gem 'json'
+gem 'bcrypt'
 
 
 group :development do
