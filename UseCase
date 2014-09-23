@@ -1,0 +1,15 @@
+UseCase:
+User Login
+  User will fill out input fields [:email, :password]. An HTTP request will be made
+  to the server, if it a valid answer then the use will recieve a token else they will
+  be prompt that the inputs are invalid. In addition there will be an option to signup as a new user
+User Sign_up:
+  User fills out the input fields[ :email, :password, :password_confirm]
+  Then a HTTP request with a callback is called to the server. It checks if the
+  email is already taken. If it available then it checks to see if the passwords are the same
+  Maybe check to see if the passwords are up to standard. IF not, then request the user to submit another one
+  If the password is correct then a User record is created and a auth token is created.
+  Then the user will be sent to their profile picture
+Profile
+Search
+Inbox

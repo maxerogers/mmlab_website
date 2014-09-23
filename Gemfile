@@ -11,6 +11,7 @@ gem 'json'
 gem 'bcrypt'
 
 #omnis
+gem 'twitter'
 gem 'omniauth-twitter'
 
 group :development do

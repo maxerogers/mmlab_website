@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922214516) do
+ActiveRecord::Schema.define(version: 20140923150231) do
+
+  create_table "skills", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "skills_users", id: false, force: true do |t|
+    t.integer "skill_id"
+    t.integer "user_id"
+  end
 
   create_table "tokens", force: true do |t|
     t.string "type"
+    t.string "token"
+    t.string "secret"
   end
 
   create_table "users", force: true do |t|
@@ -24,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140922214516) do
     t.string  "looking_for"
     t.boolean "employer",        default: false
     t.string  "password_digest"
+    t.string  "email"
   end
 
 end
