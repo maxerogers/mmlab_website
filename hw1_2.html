@@ -1,0 +1,44 @@
+<!DOCType html>
+<html>
+<head>
+</head>
+<body>
+  <h2> HW1_2: App Inventor 2</h2>
+  <p> A demo version of my Huntr application, a job hunting application inspired by Tinder. </p>
+  <p> Using HTTPRequests through App Inventor's WEB component I was able to generate most of the basic functionality </p>
+  <p> Through these Web.url calls I can communicate to the Ruby-Sinatra server that I built to act as the restful api.</p>
+  <p> There were many challeneges in building this application. Ignoring the GUI's flakey nature my 3 biggest issue were that </p>
+  <ol>
+    <li> I couldn't devise a way to generate new graphic componenets like a new button or label. As a result I wasn't able to implement the inbox/messaging component. </li>
+    <li> Global variables as they are called are not global to the entire application. This caused issues as I wanted to store more than just a user id between activities. Normally in Android apps there is a api called SharedPrefences which allows local storage for an application. App Inventor didn't appear to implement this behavior so I resorted to just passing a START variable between the Screens.</li>
+    <li> I failed to get the WEB.PostFile method to work with my application so the picture uploading was scrapped from this demo. The implicit nature of this environment made it difficult for me to see the exact http request they were writing. Otherwise I could make sure it was equalitivate to the one I used to test the server. </li>
+  </ol>
+  <p> So what functionality does this application demonstrate? </p>
+  <ul>
+    <li> Account Login and Signup </li>
+    <li> Profile Updating </li>
+    <li> Matching </li>
+  </ul>
+  <h3> Account Login and Signup </h3>
+  <img src="img/signup_app.png">
+  <p> Sign up using an email and a password. It will check to make sure the email isn't take and that the passwords match. If everthing is valid, then a new user account will be made on the server and you'll be forwarded to the profile page </p>
+  <img src="img/login_app.png">
+  <p> For future logins, you can use this page as long as you remember your email and password correctly. To test this try 'eva@eva.com' with eva or with 'max@max.com' with max as the password</p>
+  <h3> Profile Updating </h3>
+  <img src="img/edit_profile.png">
+  <p> On this page you can edit all of the data about a user from his name to his skills. You do this by filling out the forms and clicking the update button.</p>
+  <p> While I wasn't able to get the profile picture to persist on the server, it does however allow you to select it.</p>
+  <p> From the profile you can access the inbox and the matching. The Inbox was half built but without the ablility to generate new labels and buttons from code I decided to just disable it. The matching button takes you to the match maker</p>
+  <h3> Matching </h3>
+  <img src="img/matchmaking.png">
+  <p> Here it will display a user and their general info and you can decide if you like them or not. Normally if you both showed interest in each other you'd get a message however thats disabled in this version.</p>
+  <h3> Video</h3>
+  <video width="640" height="480" controls>
+  <source src="vids/screen_recording.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p> A download of the .aia file can be found <a href='/files/Huntr-3.aia'> here </a></p>
+  <p> A copy of the .apk file can be found <a href='/files/Huntr-6.apk'> here </a></p>
+  <p> The source code to the server can be found <a href='https://github.com/honeycodedbear/Huntr-App-Inventor'> here </a></p>
+</body>
+</html>
